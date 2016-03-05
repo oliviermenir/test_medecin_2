@@ -5,7 +5,6 @@ namespace :import_csv do
   task doctor: :environment do
     csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
     filepath    = '/../../doctor.csv'  # Relative to current file
-    #sdfghgrerthj
 
     CSV.foreach(filepath, csv_options) do |row|
       puts "#{row['id']} #{row['first_name']}, a #{row['last_name']}"
